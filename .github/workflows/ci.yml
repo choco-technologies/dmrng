@@ -25,7 +25,7 @@ jobs:
           cd build
           # Build the deterministic test-only port; hardware releases exclude it.
           cmake .. -DDMOD_MODE=DMOD_MODULE -DDMOD_CPU_FAMILY=x86_64
-          cmake --build . --target dmrng dmrng_port test_dmrng
+          cmake --build . --parallel
 
       - name: Verify module files
         run: |
