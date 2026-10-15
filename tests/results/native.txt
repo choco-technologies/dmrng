@@ -1,0 +1,22 @@
+1: === DMOD Test Runner ===
+1: [ RUN  ] release_and_recreate
+1: [  OK  ] release_and_recreate
+1: [ RUN  ] timeout_is_propagated
+1: [  OK  ] timeout_is_propagated
+1: [ RUN  ] fail_closed_and_clear_partial_output
+1: [  OK  ] fail_closed_and_clear_partial_output
+1: [ RUN  ] concurrent_readers
+1: [  OK  ] concurrent_readers
+1: [ RUN  ] sustained_generation
+1: RNG_SAMPLE bytes=65536 checksum=1c6964e5
+1: [  OK  ] sustained_generation
+1: [ RUN  ] single_owner_and_configuration_validation
+1: [  OK  ] single_owner_and_configuration_validation
+1: [ RUN  ] independent_blocks
+1: [  OK  ] independent_blocks
+1: [ RUN  ] unaligned_and_guarded_buffer
+1: [  OK  ] unaligned_and_guarded_buffer
+1: [ RUN  ] zero_and_invalid_reads
+1: [  OK  ] zero_and_invalid_reads
+1:
+1: === Results: 9/9 passed ===

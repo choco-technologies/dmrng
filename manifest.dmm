@@ -1,0 +1,12 @@
+# Include dynamically generated versions list from latest release
+$include https://github.com/choco-technologies/dmrng/releases/download/vlatest/versions.dmm
+
+# Module entries with version placeholder - expanded by $version-available.
+# Both the core module and the port use <cpu_family> here, not <arch_name>:
+# the release workflow packages this repo per DMOD_CPU_FAMILY, not per full
+# architecture (see dmfmc/manifest.dmm or dmuart/manifest.dmm for the
+# real-world reference).
+dmrng      https://github.com/choco-technologies/dmrng/releases/download/v<version>/dmrng-v<version>-<cpu_family>.zip
+dmrng_port https://github.com/choco-technologies/dmrng/releases/download/v<version>/dmrng_port-v<version>-<cpu_family>.zip
+
+test_dmrng https://github.com/choco-technologies/dmrng/releases/download/v<version>/test_dmrng-v<version>-<cpu_family>.zip
