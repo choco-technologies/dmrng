@@ -15,8 +15,7 @@ cmake --build build/stm32f7 --parallel
 ```
 
 Use `-DDMOD_DIR=/path/to/dmod` for a local SDK. STM32F4 uses
-`-DDMOD_CPU_FAMILY=stm32f4` and a separate build directory. `make` delegates
-to the same CMake build; set `DMOD_DIR` and `DMOD_CPU_FAMILY` as needed.
+`-DDMOD_CPU_FAMILY=stm32f4` and a separate build directory.
 Build outputs are `dmrng`, `dmrng_port` and `test_dmrng`, with `.dmf`,
 `.dmfc`, dependency lists and release packages.
 
