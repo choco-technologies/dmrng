@@ -1,0 +1,67 @@
+stm32f746xg@/>
+stm32f746xg@/>
+stm32f746xg@/> test_dmrng
+=== DMOD Test Runner ===
+[ RUN  ] vfs_device
+dmdevfs: [ERROR] Driver failed to open device: /rng
+[ERROR] Failed to open file '/dev/rng'
+[  OK  ] vfs_device
+[ RUN  ] sustained_generation
+RNG_SAMPLE bytes=65536 checksum=e664211e
+[  OK  ] sustained_generation
+[ RUN  ] single_owner_and_configuration_validation
+[  OK  ] single_owner_and_configuration_validation
+[ RUN  ] independent_blocks
+[  OK  ] independent_blocks
+[ RUN  ] unaligned_and_guarded_buffer
+[  OK  ] unaligned_and_guarded_buffer
+[ RUN  ] zero_and_invalid_reads
+[  OK  ] zero_and_invalid_reads
+
+=== Results: 6/6 passed ===
+stm32f746xg@/>
+stm32f746xg@/>
+stm32f746xg@/>
+stm32f746xg@/> test_dmrng
+=== DMOD Test Runner ===
+[ RUN  ] vfs_device
+dmdevfs: [ERROR] Driver failed to open device: /rng
+[ERROR] Failed to open file '/dev/rng'
+[  OK  ] vfs_device
+[ RUN  ] sustained_generation
+RNG_SAMPLE bytes=65536 checksum=2fb8d01b
+[  OK  ] sustained_generation
+[ RUN  ] single_owner_and_configuration_validation
+[  OK  ] single_owner_and_configuration_validation
+[ RUN  ] independent_blocks
+[  OK  ] independent_blocks
+[ RUN  ] unaligned_and_guarded_buffer
+[  OK  ] unaligned_and_guarded_buffer
+[ RUN  ] zero_and_invalid_reads
+[  OK  ] zero_and_invalid_reads
+
+=== Results: 6/6 passed ===
+stm32f746xg@/>
+stm32f746xg@/>
+stm32f746xg@/>
+stm32f746xg@/> test_dmrng
+=== DMOD Test Runner ===
+[ RUN  ] vfs_device
+dmdevfs: [ERROR] Driver failed to open device: /rng
+[ERROR] Failed to open file '/dev/rng'
+[  OK  ] vfs_device
+[ RUN  ] sustained_generation
+RNG_SAMPLE bytes=65536 checksum=7d471318
+[  OK  ] sustained_generation
+[ RUN  ] single_owner_and_configuration_validation
+[  OK  ] single_owner_and_configuration_validation
+[ RUN  ] independent_blocks
+[  OK  ] independent_blocks
+[ RUN  ] unaligned_and_guarded_buffer
+[  OK  ] unaligned_and_guarded_buffer
+[ RUN  ] zero_and_invalid_reads
+[  OK  ] zero_and_invalid_reads
+
+=== Results: 6/6 passed ===
+stm32f746xg@/>
+stm32f746xg@/>
