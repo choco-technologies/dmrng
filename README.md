@@ -4,7 +4,7 @@
 [![CI](https://github.com/choco-technologies/dmrng/actions/workflows/ci.yml/badge.svg)](https://github.com/choco-technologies/dmrng/actions/workflows/ci.yml)
 
 Hardware entropy driver for DMOD. STM32F4/F7 ports share the legacy RNG IP
-implementation, with a read-only `/dev/rng` device and a small API suitable
+implementation; the ESP32-S3 port reads its on-chip generator (WDEV_RND_REG). A read-only `/dev/rng` device and a small API suitable
 for feeding a TLS library's entropy collector. No software random fallback.
 
 ## Build

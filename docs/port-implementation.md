@@ -38,6 +38,17 @@ hardware data only, never ticks, rand() or a fixed-seed PRNG. Register APIs in
 one translation unit; keep callback definitions with their registration site.
 Add MCU/board presets and validate both failure paths and actual hardware.
 
+## ESP32-S3
+
+`src/port/esp32s3/port.c` reads `WDEV_RND_REG`. The register is a PRNG that takes 2 bits of entropy from a hardware source on every
+APB cycle: the noise of the RF subsystem while the Wi-Fi or the Bluetooth is on, or the 8 MHz RC oscillator, which ESP-IDF
+documents as enough for strong random numbers and which the port switches on (`acquire`; `release` puts the clocks back as they
+were). ESP-IDF adds the SAR ADC as a second source (`bootloader_random_enable`); that part, with the internal analog bus, is not
+done here. A word is taken at most every 25 us (ESP-IDF waits 1778 APB cycles on the S3) so that the entropy is not drained faster
+than it comes in; throughput is about 160 kB/s. There is no ready or error flag: the port keeps the policy of the STM32 one
+(the first sample is discarded, two equal words in a row are a fault until release + acquire). The statistical quality of the
+output was not measured. It uses `dmclk_port` 1.4 (the first release with an ESP32-S3 port) for the delay.
+
 The `x86_64` port is exclusively for deterministic tests. CI and release
 explicitly exclude it from their hardware matrix.
 
