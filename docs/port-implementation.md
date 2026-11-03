@@ -11,7 +11,7 @@ STM32F4/F7 use the same legacy RNG register layout (RM0090/RM0385):
 No interrupt vector is registered: reads use bounded polling with interrupts
 left enabled. Common code must not define DMOD_ENABLE_REGISTRATION again.
 
-The RNG domain is acquired at exactly 48 MHz through `dmclk_port` 1.2 before
+The RNG domain is acquired at exactly 48 MHz through `dmclk_port` (1.2 or newer) before
 changing AHB2 gate/reset bit 6. This borrows a compatible running CLK48
 without reconfiguring a PLL shared with USB/SDMMC. A pre-enabled generator
 is treated as externally owned and rejected. A pre-existing clock gate is

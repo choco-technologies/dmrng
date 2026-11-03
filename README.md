@@ -29,7 +29,7 @@ test_dmrng
 ```
 
 The clock driver must already supply CLK48. Instance creation reserves the
-48 MHz RNG domain through `dmclk_port` 1.2; it does not retune a shared PLL.
+48 MHz RNG domain through `dmclk_port` (1.2 or newer); it does not retune a shared PLL.
 The board preset creates `/dev/rng` (also numbered as `dmrng0`). Install one
 MCU or board preset, not both. See [configs](configs/README.md).
 
