@@ -49,6 +49,6 @@ target_include_directories(${DMOD_MODULE_NAME}_if INTERFACE
     ${CMAKE_SOURCE_DIR}/include
 )
 
-if(DMOD_CPU_FAMILY MATCHES "^stm32f[47]$")
-    dmod_link_modules(${DMOD_MODULE_NAME} dmclk_port@1.2)
+if(DMOD_CPU_FAMILY MATCHES "^stm32f[47]$" OR DMOD_CPU_FAMILY STREQUAL "esp32s3")
+    dmod_link_modules(${DMOD_MODULE_NAME} dmclk_port)
 endif()

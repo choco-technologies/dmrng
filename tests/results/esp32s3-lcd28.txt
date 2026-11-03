@@ -1,0 +1,26 @@
+dmrng on the Waveshare ESP32-S3-Touch-LCD-2.8 (ESP32-S3FN16R8), 2026-11-03
+Firmware: dmod-boot feature/esp32-s3, modules in the external RAM, dmrng driver=board/esp32s3-lcd28/rng.ini, dmclk 1.4
+The [ERROR] lines are the expected refusals of the test (the second owner of the device), the same as on the STM32F746G-DISCO.
+The statistical quality of the output was not measured.
+
+esp32s3fn16r8@/> test_dmrng
+=== DMOD Test Runner ===
+[ RUN  ] vfs_device
+dmdevfs: [ERROR] Driver failed to open device: /rng
+[ERROR] Failed to open file '/dev/rng'
+[  OK  ] vfs_device
+[ RUN  ] sustained_generation
+RNG_SAMPLE bytes=65536 checksum=db892da2
+[  OK  ] sustained_generation
+[ RUN  ] single_owner_and_configuration_validation
+[  OK  ] single_owner_and_configuration_validation
+[ RUN  ] independent_blocks
+[  OK  ] independent_blocks
+[ RUN  ] unaligned_and_guarded_buffer
+[  OK  ] unaligned_and_guarded_buffer
+[ RUN  ] zero_and_invalid_reads
+[  OK  ] zero_and_invalid_reads
+
+=== Results: 6/6 passed ===
+esp32s3fn16r8@/> 
+

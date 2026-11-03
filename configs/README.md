@@ -15,6 +15,7 @@ physical validation.
 | STM32F429I-DISCOVERY | STM32F429ZI | `board/stm32f429i-discovery/rng.ini` |
 | STM32F746G-DISCO | STM32F746NG | `board/stm32f746g-disco/rng.ini` |
 | NUCLEO-F767ZI | STM32F767ZI | `board/nucleo-f767zi/rng.ini` |
+| Waveshare ESP32-S3-Touch-LCD-2.8 | ESP32-S3 | `board/esp32s3-lcd28/rng.ini` (or `mcu/esp32s3.ini`) |
 
 `mcu/` also contains STM32F746ZG, for custom boards using that package.
 Only explicitly listed MCUs have presets: RNG availability must be checked

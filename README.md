@@ -4,7 +4,7 @@
 [![CI](https://github.com/choco-technologies/dmrng/actions/workflows/ci.yml/badge.svg)](https://github.com/choco-technologies/dmrng/actions/workflows/ci.yml)
 
 Hardware entropy driver for DMOD. STM32F4/F7 ports share the legacy RNG IP
-implementation, with a read-only `/dev/rng` device and a small API suitable
+implementation; the ESP32-S3 port reads its on-chip generator (WDEV_RND_REG). A read-only `/dev/rng` device and a small API suitable
 for feeding a TLS library's entropy collector. No software random fallback.
 
 ## Build
@@ -29,7 +29,7 @@ test_dmrng
 ```
 
 The clock driver must already supply CLK48. Instance creation reserves the
-48 MHz RNG domain through `dmclk_port` 1.2; it does not retune a shared PLL.
+48 MHz RNG domain through `dmclk_port` (1.2 or newer); it does not retune a shared PLL.
 The board preset creates `/dev/rng` (also numbered as `dmrng0`). Install one
 MCU or board preset, not both. See [configs](configs/README.md).
 
