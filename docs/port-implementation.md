@@ -47,7 +47,7 @@ were). ESP-IDF adds the SAR ADC as a second source (`bootloader_random_enable`);
 done here. A word is taken at most every 25 us (ESP-IDF waits 1778 APB cycles on the S3) so that the entropy is not drained faster
 than it comes in; throughput is about 160 kB/s. There is no ready or error flag: the port keeps the policy of the STM32 one
 (the first sample is discarded, two equal words in a row are a fault until release + acquire). The statistical quality of the
-output was not measured. It uses `dmclk_port` 1.4 (the first release with an ESP32-S3 port) for the delay.
+output was not measured. It uses `dmclk_port` (the latest release; 1.4 is the first with an ESP32-S3 port) for the delay.
 
 The `x86_64` port is exclusively for deterministic tests. CI and release
 explicitly exclude it from their hardware matrix.
